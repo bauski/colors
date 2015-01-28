@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="A Javascript Color picker experiment" />
+		<meta name="keyword" content="javascript, color picker, color, design" />
+		<meta name="author" content="Bau Kim" />
+		<title>
+			Javascript Color Picker
+		</title>
+		<style type="text/css">
+			body {
+				padding: 0 ;
+				margin: 0 ;
+				font-family: arial ;
+				color: #666 ;
+			}
+			
+			.container {
+				width: 1000px ;
+				margin: 0 auto ;
+			}
+			
+			.color {
+				width: 100px ;
+				height: 100px ;
+				color: #fff ;
+			}
+		</style>
+		<script type="text/javascript">
+			function init() {
+				//set emtpy array
+				var elems = new Array() ;
+				//get div elements
+				var divs = document.getElementsByClassName('color') ;
+				for(var i = 0 ; i < divs.length ; i++)
+				{
+					divs[i].style.backgroundColor = divs[i].getAttribute("data-color") ;
+					divs[i].innerHTML = divs[i].getAttribute("data-color") ;
+				}
+			}
+			
+			window.onload = init ;
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>
+				Javascript Color Picker
+			</h1>
+			<div class="pallette">
+				<div class="color" data-color="#566395">
+				</div>
+				<div class="color" data-color="#924382">
+				</div>
+				<div class="color" data-color="#184723">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
